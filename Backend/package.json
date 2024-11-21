@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "nodemon --env-file=.env index.js",
     "start": "vite",
-    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
