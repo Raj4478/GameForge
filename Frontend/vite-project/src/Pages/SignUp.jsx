@@ -1,0 +1,170 @@
+import React from 'react'
+import { useForm } from 'react-hook-form'
+import axios from 'axios'
+import { json, Link } from 'react-router-dom'
+import { useState } from 'react'
+import { ToastContainer,toast } from 'react-toastify'
+import 'react-toastify/ReactToastify.css'
+import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
+
+const SignUp = () => {
+
+  const[image,useImage] = useState()
+
+  const navigate = useNavigate()
+
+  const {register,handleSubmit,watch,formState:{errors}  }  = useForm()
+
+const loggedin = () => toast('🦄 You have Successfully Signed Up', {
+  position: "top-center",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  theme:"dark",
+  progress: undefined,
+  
+  
+  });
+  
+  
+  const error1 = (einput) =>toast.error(einput, {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    
+    });
+
+  const onSubmit = async (data)=>
+    {;
+  
+
+      var jsons = {username:data.Username,fullName:data.Name,password:data.Password,email:data.Email,coverImage:image }
+
+
+ try {
+    
+    const urls = '/api/v1/users/register'
+
+    console.log(data.Name);
+    console.log(image);
+    
+    const formdata = new FormData()
+    formdata.append('coverImage',jsons)
+    axios({method:'post',
+      url: urls,
+      data:jsons,
+      headers : {
+        'content-Type' : 'multipart/form-data'
+      }
+    })
+    .then(res=>console.log(res.data.message)).catch(err=>console.log((err))
+    )
+    
+   
+
+  
+ 
+ } catch (error) {
+  console.log(error.message);
+  error1(error.message)
+  
+ }
+ setTimeout(()=>{
+  navigate("/login")
+ },4000) 
+
+ }
+ 
+  return (
+
+    <>
+    
+
+<motion.div initial={{x:-70}} animate={{x:0}} transition={{delay:0.5,duration:1}} className='grid  max-[900px]:  h-screen '>
+
+
+   <form onSubmit={handleSubmit(onSubmit)} className=' justify-center bg-pic2 bg-cover  max-[900px]:w-screen   text-white items-center grid-flow-row'>
+
+
+<div className='  p-16  grid grid-flow-row justify-center py-40    ' >
+
+<h3 className='font-great text-red-400 text-3xl'>
+    Game <span className='text-amber-400'>Forage</span> 
+  </h3>
+  <h5 className='mt-3  font-mono text-lg'>
+    Create an Account.
+  </h5>
+
+  <p className='mt-3'>
+  Create your Good Food account and receive our exclusive email newsletters.
+
+
+  </p>
+
+  <div className='grid grid-flow-row w-5/5  mt-6  '>
+<label htmlFor="Username" className='font-new'>UserName</label>
+    <input {...register("Username",{required:true,minLength:{value:3,message:"Please enter a vaild Username"},maxLength:{value:30,message:"Please enter a valid username"}})} className=' border pl-1 text-white bg-transparent backdrop-blur-xl border-black  py-2 ' />
+    {errors.Name && <div className='mt-2 font-semibold text-slate-600'>{errors.Name.message}</div>}
+</div>
+  <div className='grid grid-flow-row w-5/5 mt-6  '>
+<label htmlFor="Name" className='font-new'>Name</label>
+    <input {...register("Name",{required:true,minLength:{value:3,message:"Min Length is 3"},maxLength:{value:30,message:"Max value reached"}})} className=' border pl-1 border-black text-white bg-transparent backdrop-blur-xl py-2 ' />
+    {errors.Name && <div className='mt-2 font-semibold text-slate-600'>{errors.Name.message}</div>}
+</div>
+<div className='grid grid-flow-row w-5/5 mt-6  '>
+<label htmlFor="Email" className='font-new'>Email</label>
+    <input {...register("Email",{required:true,minLength:{value:3,message:"Min Length is 3"},maxLength:{value:30,message:"Max value reached"}})} className=' border pl-1 border-black text-white bg-transparent backdrop-blur-xl  py-2 ' />
+    {errors.Email && <div className='mt-2 font-semibold text-slate-600'>{errors.Email.message}</div>}
+</div>
+
+<div className='grid grid-flow-row w-5/5 pt-8'>
+<label htmlFor="Password" className='font-new'>Password</label>
+<input type='password' {...register("Password",{required:true,minLength:{value:8,message:"Min Length is 8"},maxLength:{value:20,message:"Max value reached"}})} className=' border pl-1 text-white  border-black py-2 bg-transparent backdrop-blur-xl' />
+{errors.Password &&<div className='mt-2 font-semibold text-slate-600'>{errors.Password.message}</div> }
+</div>
+
+<div className='mt-4'>
+<label htmlFor="Upload" className='font-new'>Profile Image</label>
+<input type='file' name='Upload' onChange={((e)=>useImage(e.target.files[0]))} />
+</div>
+
+
+<p className='mt-10 p-2'>Already have an Account?  <Link to="#" className='text-red-300 border-b border-white duration-500 hover:border-red-300'>Log In</Link></p>
+     <input type="submit"  value="Create Account" className=' text-2xl font-new text-red-300  duration-500 hover:text-white hover:bg-red-300 rounded-md py-2  border'/>
+     </div>
+
+
+   
+
+ 
+     
+   </form>
+ 
+   </motion.div>
+   <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+
+/>
+
+   </>
+  )
+}
+
+export default SignUp
