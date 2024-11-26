@@ -12,7 +12,7 @@ import { gameId } from '../store/detailProvider'
 
 const   Sports = () => {
 
-    const genre = `https://api.rawg.io/api/genres?key=cebccbc149c146ba9f034b6e6fda3dcd`
+    const genre = `https://api.rawg.io/api/genres?key=${import.meta.env.VITE_API_KEY}`
 
     const[apiData,setApiData] = useState(null)
 
