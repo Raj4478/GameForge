@@ -67,8 +67,7 @@ const Login = () => {
           navigate("/")
          },1500) 
        
-      }
-  catch (error) {
+      }).catch (error) {
 
 
   console.log(error.message);
