@@ -5,7 +5,7 @@ import CarousalCard from './CarousalCard';
 import { useState,useEffect } from 'react';
 
 const SwipeCarousel = () => {
-  const url = `https://api.rawg.io/api/genres?key=${import.meta.env.VITE_API_KEY}`
+  const url = `https://api.rawg.io/api/games?key=${import.meta.env.VITE_API_KEY}`
 
 
   const [apiData,setApiData] = useState()
