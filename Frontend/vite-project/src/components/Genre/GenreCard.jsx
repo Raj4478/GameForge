@@ -4,7 +4,7 @@ import RatingReview from '../starRating'
 import { motion } from 'framer-motion'
 const   GenreCard = ({id}) => {
   
-const genre = `https://api.rawg.io/api/genres?key=${import.meta.env.VITE_API_KEY}`
+const genre = `https://api.rawg.io/api/games/${id}?key=${import.meta.env.VITE_API_KEY}`
 
 const styleContainer = {
   position: "relative",
