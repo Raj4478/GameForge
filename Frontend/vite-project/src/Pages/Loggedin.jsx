@@ -67,7 +67,17 @@ const Login = () => {
           navigate("/")
          },1500) 
        
-      }).catch (error) {
+      }
+      ).catch(err=>error1(err.message))
+      
+  
+
+      
+     
+    
+    
+   }
+  catch (error) {
 
 
   console.log(error.message);
@@ -79,6 +89,7 @@ const Login = () => {
 
  
   }
+  
   
   return (
 
