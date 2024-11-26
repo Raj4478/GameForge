@@ -59,17 +59,15 @@ const Login = () => {
         url: urls,
         data:jsons,
       })
-      .then(res=>console.log(res.data.message)).catch(err=>error1(err.message))
-      
-  
-
-      loggedin()
-     
-     setTimeout(()=>{
-      navigate("/")
-     },1500) 
-    
-   }
+      .then(res=>
+      {
+        console.log(res.data.message)
+        loggedin()
+        setTimeout(()=>{
+          navigate("/")
+         },1500) 
+       
+      }
   catch (error) {
 
 
