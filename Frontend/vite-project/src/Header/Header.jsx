@@ -76,7 +76,7 @@ const dispatch = useDispatch()
     <div className='flex w-full border-gray-800 border-b items-center  justify-around'>
         <div className='ml-6 flex mr-8'>
 <img className='h-10' src={myimg} alt="" />
-<h2 className='flex ml-4 font-kalam font-bold text-light-blue-300  text-2xl'>Game <span className='text-light-green-200'>Forge</span></h2>
+<h2 className='flex ml-4 font-kalam font-bold text-white  text-2xl'>Game <span className='text-white'>Forge</span></h2>
         </div>
 
         <div className=' my-4  flex w-full text-white justify-evenly '>
