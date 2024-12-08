@@ -52,7 +52,7 @@ const Login = () => {
 
  try {
   
-    const urls = '/api/v1/users/login'
+    const urls = 'https://game-forge-kdny.vercel.app/api/v1/users/login'
 
 
     axios({method:'post',
