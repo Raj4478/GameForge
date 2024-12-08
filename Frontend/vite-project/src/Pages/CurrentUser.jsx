@@ -11,7 +11,7 @@ const userDetail = () => {
 
     try {
         
-    const urls = 'https://game-forge-kdny.vercel.app/api/v1/users/current-user'
+    const urls = '/api/v1/users/current-user'
     axios.get(urls)
     .then((res)=>(setProfile(res.data.data)
     )
