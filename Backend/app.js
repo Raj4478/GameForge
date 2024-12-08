@@ -22,7 +22,7 @@ import userRouter from './routes/user.routes.js'
 
 
 app.get("/",(req,res)=>{
-    res.json("Hello");
+    res.json( process.env.PORT);
 })
 app.use("/api/v1/users", userRouter)
 export {app}
