@@ -51,7 +51,7 @@ const loggedin = () => toast('🦄 You have Successfully Signed Up', {
 
  try {
     
-    const urls = '/api/v1/users/register'
+    const urls = 'https://game-forge-kdny.vercel.app/api/v1/users/register'
 
     console.log(data.Name);
     console.log(image);
