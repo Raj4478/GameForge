@@ -59,29 +59,28 @@ npm install
 3. **Run the Application**
    ```bash
 
- # Backend
-cd backend
-npm run dev
+    # Backend
+   cd backend
+   npm run dev
 
-# Frontend
-cd frontend
-cd vite-project
-npm run dev
+   # Frontend
+   cd frontend
+   cd vite-project
+   npm run dev
 
 
 ## ⚙️ Environment Variables
 
 ### Create a .env file in the backend directory and add the following variables:
-
-bash```
-PORT=5000
-MONGO_URI=<Your MongoDB URI>
-RAWG_API_KEY=<Your RAWG API Key>
-JWT_SECRET=<Your Secret Key>
+    ```bash
+    PORT=5000
+    MONGO_URI=<Your MongoDB URI>
+    RAWG_API_KEY=<Your RAWG API Key>
+    JWT_SECRET=<Your Secret Key>
 
 
 ## 📁 Project Structure
-bash``` 
+   ```bash
 GameForge/
 ├── backend/
 │   ├── models/
