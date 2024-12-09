@@ -28,4 +28,14 @@ License
 - Encryption: bcrypt
 - Game Data API: RAWG API
 - Deployment: Vercel
+
+## Getting Started
+
+### Installation
+
+Clone the Repository:
+
+> git clone https://github.com/Raj4478/GameForge.git
+> cd GameForge
+
  
