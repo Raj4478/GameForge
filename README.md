@@ -57,7 +57,7 @@ Your gateway to explore and discover games effortlessly!
 #### Note - Here we have to use different Terminal to run Frontend and Backend 
 
 3. **Run the Application**
-   ```bash
+    ```bash
 
     # Backend
    cd backend
@@ -72,7 +72,7 @@ Your gateway to explore and discover games effortlessly!
 ## ⚙️ Environment Variables
 
 ### Create a .env file in the backend directory and add the following variables:
-    ```bash
+  ```bash
     PORT=5000
     MONGO_URI=<Your MongoDB URI>
     RAWG_API_KEY=<Your RAWG API Key>
@@ -80,7 +80,7 @@ Your gateway to explore and discover games effortlessly!
 
 
 ## 📁 Project Structure
-    ```bash
+        ```bash
         GameForge/
         ├── backend/
         │   ├── models/
