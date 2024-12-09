@@ -38,12 +38,12 @@ Your gateway to explore and discover games effortlessly!
 
 ### 📦 Installation  
 1. **Clone the Repository**:  
-   ```bash
+      ```bash
    git clone https://github.com/Raj4478/GameForge.git
    cd GameForge
 
 2. **Install Dependencies**
-   ```bash
+      ```bash
 
    # For Backend
     cd backend
@@ -57,30 +57,31 @@ Your gateway to explore and discover games effortlessly!
 #### Note - Here we have to use different Terminal to run Frontend and Backend 
 
 3. **Run the Application**
-    ```bash
+        ```bash
 
-    # Backend
-   cd backend
-   npm run dev
+           # Backend
+            cd backend
+             npm run dev
 
-   # Frontend
-   cd frontend
-   cd vite-project
-   npm run dev
+           # Frontend
+            cd frontend
+            cd vite-project
+            npm run dev
 
 
 ## ⚙️ Environment Variables
 
 ### Create a .env file in the backend directory and add the following variables:
-  ```bash
-    PORT=5000
-    MONGO_URI=<Your MongoDB URI>
-    RAWG_API_KEY=<Your RAWG API Key>
-    JWT_SECRET=<Your Secret Key>
-
+   
+      
+   
+        PORT=5000
+       MONGO_URI=<Your MongoDB URI>
+       RAWG_API_KEY=<Your RAWG API Key>
+       JWT_SECRET=<Your Secret Key>
 
 ## 📁 Project Structure
-        ```bash
+    ```bash
         GameForge/
         ├── backend/
         │   ├── models/
