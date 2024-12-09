@@ -38,11 +38,11 @@ Your gateway to explore and discover games effortlessly!
 
 ### For Frontend
 
-- https://vercel.com/rajeshwar-singhs-projects/game-forge-1k1m
+- https://game-forge-1k1m.vercel.app/
 
 ### For Backend
 
-- https://vercel.com/rajeshwar-singhs-projects/game-forge-kdny
+- https://game-forge-kdny.vercel.app/?vercelToolbarCode=55iPed4kvBd0Cqs
 
 ---
 
@@ -93,7 +93,7 @@ Your gateway to explore and discover games effortlessly!
        JWT_SECRET=<Your Secret Key>
 
 ## 📁 Project Structure
-    ```bash
+    
         GameForge/
         ├── backend/
         │   ├── models/
