@@ -34,6 +34,18 @@ Your gateway to explore and discover games effortlessly!
 
 ---
 
+## Vercel Deployment Link
+
+### For Frontend
+
+- https://vercel.com/rajeshwar-singhs-projects/game-forge-1k1m
+
+### For Backend
+
+- https://vercel.com/rajeshwar-singhs-projects/game-forge-kdny
+
+---
+
 ## 🚀 Getting Started  
 
 ### 📦 Installation  
