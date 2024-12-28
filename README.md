@@ -46,6 +46,15 @@ Your gateway to explore and discover games effortlessly!
 
 ---
 
+### Backend Links
+
+- https://game-forge-kdny.vercel.app/api/v1/users/register
+- https://game-forge-kdny.vercel.app/api/v1/users/login
+- https://game-forge-kdny.vercel.app/api/v1/users/current-user
+(for more information go to the front src and visit the page folder)
+
+---
+
 ## 🚀 Getting Started  
 
 ### 📦 Installation  
